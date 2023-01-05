@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_vangsuran" targetNamespace="http://tempuri.org/ds_vangsuran.xsd" xmlns:mstns="http://tempuri.org/ds_vangsuran.xsd" xmlns="http://tempuri.org/ds_vangsuran.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_bangunanConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_bangunanConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIMBangunan.Properties.Settings.GlobalReference.Default.db_bangunanConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_angsuranTableAdapter" GeneratorDataComponentClassName="v_angsuranTableAdapter" Name="v_angsuran" UserDataComponentName="v_angsuranTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_bangunanConnectionString (Settings)" DbObjectName="db_bangunan.dbo.v_angsuran" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT nama, tanggal, kembalian, jml_angsuran, sisa_hutang FROM dbo.v_angsuran</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nama" DataSetColumn="nama" />
+              <Mapping SourceColumn="tanggal" DataSetColumn="tanggal" />
+              <Mapping SourceColumn="kembalian" DataSetColumn="kembalian" />
+              <Mapping SourceColumn="jml_angsuran" DataSetColumn="jml_angsuran" />
+              <Mapping SourceColumn="sisa_hutang" DataSetColumn="sisa_hutang" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_vangsuran" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ds_vangsuran" msprop:Generator_UserDSName="ds_vangsuran">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_angsuran" msprop:Generator_TableClassName="v_angsuranDataTable" msprop:Generator_TableVarName="tablev_angsuran" msprop:Generator_RowChangedName="v_angsuranRowChanged" msprop:Generator_TablePropName="v_angsuran" msprop:Generator_RowDeletingName="v_angsuranRowDeleting" msprop:Generator_RowChangingName="v_angsuranRowChanging" msprop:Generator_RowEvHandlerName="v_angsuranRowChangeEventHandler" msprop:Generator_RowDeletedName="v_angsuranRowDeleted" msprop:Generator_RowClassName="v_angsuranRow" msprop:Generator_UserTableName="v_angsuran" msprop:Generator_RowEvArgName="v_angsuranRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nama" msprop:Generator_ColumnVarNameInTable="columnnama" msprop:Generator_ColumnPropNameInRow="nama" msprop:Generator_ColumnPropNameInTable="namaColumn" msprop:Generator_UserColumnName="nama" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="tanggal" msprop:Generator_ColumnVarNameInTable="columntanggal" msprop:Generator_ColumnPropNameInRow="tanggal" msprop:Generator_ColumnPropNameInTable="tanggalColumn" msprop:Generator_UserColumnName="tanggal" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="kembalian" msprop:Generator_ColumnVarNameInTable="columnkembalian" msprop:Generator_ColumnPropNameInRow="kembalian" msprop:Generator_ColumnPropNameInTable="kembalianColumn" msprop:Generator_UserColumnName="kembalian" type="xs:int" minOccurs="0" />
+              <xs:element name="jml_angsuran" msprop:Generator_ColumnVarNameInTable="columnjml_angsuran" msprop:Generator_ColumnPropNameInRow="jml_angsuran" msprop:Generator_ColumnPropNameInTable="jml_angsuranColumn" msprop:Generator_UserColumnName="jml_angsuran" type="xs:int" minOccurs="0" />
+              <xs:element name="sisa_hutang" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnsisa_hutang" msprop:Generator_ColumnPropNameInRow="sisa_hutang" msprop:Generator_ColumnPropNameInTable="sisa_hutangColumn" msprop:Generator_UserColumnName="sisa_hutang" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

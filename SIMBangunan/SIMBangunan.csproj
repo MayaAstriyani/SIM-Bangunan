@@ -1,0 +1,820 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C69926E-C8E7-4350-92A9-239C6B4D8486}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIMBangunan</RootNamespace>
+    <AssemblyName>SIMBangunan</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.2.Core, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dsSupplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSupplier.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_barang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_barang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_jenis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_jenis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_jenis1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_jenis1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_lbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_lbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_ljenis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_ljenis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_lmember.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_lmember.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_lpbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_lpbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_lsatuan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_lsatuan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_member.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_member.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_pembelianbulan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_pembelianbulan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rangsuran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rangsuran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rkredit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rkredit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rpembelianperbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rpembelianperbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rpembelianpertahun.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rpembelianpertahun.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rperbulanpenjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rperbulanpenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rperdata.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rperdata.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rpertahunpenjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rpertahunpenjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_rstokbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_rstokbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_satuan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_satuan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_satuan1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_satuan1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_user.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_vangsuran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_vangsuran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_vbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_vbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_vkredit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_vkredit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_vlkredit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_vlkredit.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormUtama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUtama.Designer.cs">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Angsuran.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Angsuran.Designer.cs">
+      <DependentUpon>Angsuran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Kredit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Kredit.Designer.cs">
+      <DependentUpon>Kredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Pembelianbarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Pembelianbarang.Designer.cs">
+      <DependentUpon>Pembelianbarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Pembelianbulan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Pembelianbulan.Designer.cs">
+      <DependentUpon>Pembelianbulan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Pembeliantahun.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Pembeliantahun.Designer.cs">
+      <DependentUpon>Pembeliantahun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Perbulan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Perbulan.Designer.cs">
+      <DependentUpon>Perbulan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Perdata.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Perdata.Designer.cs">
+      <DependentUpon>Perdata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Pertahun.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Pertahun.Designer.cs">
+      <DependentUpon>Pertahun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="laporan\Stokbarang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="laporan\Stokbarang.Designer.cs">
+      <DependentUpon>Stokbarang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\Barang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Barang.Designer.cs">
+      <DependentUpon>Barang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\Jenis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Jenis.Designer.cs">
+      <DependentUpon>Jenis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\Member.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Member.Designer.cs">
+      <DependentUpon>Member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\Satuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Satuan.Designer.cs">
+      <DependentUpon>Satuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="master\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="master\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaksi\Angsuran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaksi\Angsuran.Designer.cs">
+      <DependentUpon>Angsuran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaksi\Pembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaksi\Pembelian.Designer.cs">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="transaksi\Penjualan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="transaksi\Penjualan.Designer.cs">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="t_barang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>t_barang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="t_lbarang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>t_lbarang.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="t_pembelian.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>t_pembelian.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="t_penjualan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>t_penjualan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="t_supplier.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>t_supplier.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormUtama.resx">
+      <DependentUpon>FormUtama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Angsuran.resx">
+      <DependentUpon>Angsuran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Kredit.resx">
+      <DependentUpon>Kredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Pembelianbarang.resx">
+      <DependentUpon>Pembelianbarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Pembelianbulan.resx">
+      <DependentUpon>Pembelianbulan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Pembeliantahun.resx">
+      <DependentUpon>Pembeliantahun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Perbulan.resx">
+      <DependentUpon>Perbulan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Perdata.resx">
+      <DependentUpon>Perdata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Pertahun.resx">
+      <DependentUpon>Pertahun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="laporan\Stokbarang.resx">
+      <DependentUpon>Stokbarang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Barang.resx">
+      <DependentUpon>Barang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Jenis.resx">
+      <DependentUpon>Jenis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Member.resx">
+      <DependentUpon>Member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Satuan.resx">
+      <DependentUpon>Satuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="master\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaksi\Angsuran.resx">
+      <DependentUpon>Angsuran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaksi\Pembelian.resx">
+      <DependentUpon>Pembelian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="transaksi\Penjualan.resx">
+      <DependentUpon>Penjualan.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="dsSupplier.xsc">
+      <DependentUpon>dsSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="dsSupplier.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSupplier.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsSupplier.xss">
+      <DependentUpon>dsSupplier.xsd</DependentUpon>
+    </None>
+    <None Include="ds_barang.xsc">
+      <DependentUpon>ds_barang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_barang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_barang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_barang.xss">
+      <DependentUpon>ds_barang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_jenis.xsc">
+      <DependentUpon>ds_jenis.xsd</DependentUpon>
+    </None>
+    <None Include="ds_jenis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_jenis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_jenis.xss">
+      <DependentUpon>ds_jenis.xsd</DependentUpon>
+    </None>
+    <None Include="ds_jenis1.xsc">
+      <DependentUpon>ds_jenis1.xsd</DependentUpon>
+    </None>
+    <None Include="ds_jenis1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_jenis1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_jenis1.xss">
+      <DependentUpon>ds_jenis1.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lbarang.xsc">
+      <DependentUpon>ds_lbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_lbarang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_lbarang.xss">
+      <DependentUpon>ds_lbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ljenis.xsc">
+      <DependentUpon>ds_ljenis.xsd</DependentUpon>
+    </None>
+    <None Include="ds_ljenis.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_ljenis.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_ljenis.xss">
+      <DependentUpon>ds_ljenis.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lmember.xsc">
+      <DependentUpon>ds_lmember.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lmember.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_lmember.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_lmember.xss">
+      <DependentUpon>ds_lmember.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lpbarang.xsc">
+      <DependentUpon>ds_lpbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lpbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_lpbarang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_lpbarang.xss">
+      <DependentUpon>ds_lpbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lsatuan.xsc">
+      <DependentUpon>ds_lsatuan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_lsatuan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_lsatuan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_lsatuan.xss">
+      <DependentUpon>ds_lsatuan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_member.xsc">
+      <DependentUpon>ds_member.xsd</DependentUpon>
+    </None>
+    <None Include="ds_member.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_member.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_member.xss">
+      <DependentUpon>ds_member.xsd</DependentUpon>
+    </None>
+    <None Include="ds_pembelianbulan.xsc">
+      <DependentUpon>ds_pembelianbulan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_pembelianbulan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_pembelianbulan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_pembelianbulan.xss">
+      <DependentUpon>ds_pembelianbulan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rangsuran.xsc">
+      <DependentUpon>ds_rangsuran.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rangsuran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rangsuran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rangsuran.xss">
+      <DependentUpon>ds_rangsuran.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rkredit.xsc">
+      <DependentUpon>ds_rkredit.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rkredit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rkredit.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rkredit.xss">
+      <DependentUpon>ds_rkredit.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpembelianperbarang.xsc">
+      <DependentUpon>ds_rpembelianperbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpembelianperbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rpembelianperbarang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rpembelianperbarang.xss">
+      <DependentUpon>ds_rpembelianperbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpembelianpertahun.xsc">
+      <DependentUpon>ds_rpembelianpertahun.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpembelianpertahun.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rpembelianpertahun.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rpembelianpertahun.xss">
+      <DependentUpon>ds_rpembelianpertahun.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rperbulanpenjualan.xsc">
+      <DependentUpon>ds_rperbulanpenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rperbulanpenjualan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rperbulanpenjualan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rperbulanpenjualan.xss">
+      <DependentUpon>ds_rperbulanpenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rperdata.xsc">
+      <DependentUpon>ds_rperdata.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rperdata.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rperdata.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rperdata.xss">
+      <DependentUpon>ds_rperdata.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpertahunpenjualan.xsc">
+      <DependentUpon>ds_rpertahunpenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rpertahunpenjualan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rpertahunpenjualan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rpertahunpenjualan.xss">
+      <DependentUpon>ds_rpertahunpenjualan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rstokbarang.xsc">
+      <DependentUpon>ds_rstokbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_rstokbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_rstokbarang.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_rstokbarang.xss">
+      <DependentUpon>ds_rstokbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_satuan.xsc">
+      <DependentUpon>ds_satuan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_satuan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_satuan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_satuan.xss">
+      <DependentUpon>ds_satuan.xsd</DependentUpon>
+    </None>
+    <None Include="ds_satuan1.xsc">
+      <DependentUpon>ds_satuan1.xsd</DependentUpon>
+    </None>
+    <None Include="ds_satuan1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_satuan1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_satuan1.xss">
+      <DependentUpon>ds_satuan1.xsd</DependentUpon>
+    </None>
+    <None Include="ds_user.xsc">
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </None>
+    <None Include="ds_user.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_user.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_user.xss">
+      <DependentUpon>ds_user.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vangsuran.xsc">
+      <DependentUpon>ds_vangsuran.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vangsuran.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_vangsuran.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_vangsuran.xss">
+      <DependentUpon>ds_vangsuran.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vbarang.xsc">
+      <DependentUpon>ds_vbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_vbarang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_vbarang.xss">
+      <DependentUpon>ds_vbarang.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vkredit.xsc">
+      <DependentUpon>ds_vkredit.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vkredit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_vkredit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_vkredit.xss">
+      <DependentUpon>ds_vkredit.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vlkredit.xsc">
+      <DependentUpon>ds_vlkredit.xsd</DependentUpon>
+    </None>
+    <None Include="ds_vlkredit.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_vlkredit.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ds_vlkredit.xss">
+      <DependentUpon>ds_vlkredit.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="resources\analysis.png" />
+    <None Include="resources\backg.png" />
+    <None Include="resources\barang.png" />
+    <None Include="resources\document.png" />
+    <None Include="resources\jenis.png" />
+    <None Include="resources\laporan.png" />
+    <None Include="resources\member.png" />
+    <None Include="resources\membership.png" />
+    <None Include="resources\note.png" />
+    <None Include="resources\password.png" />
+    <None Include="resources\pembelian.png" />
+    <None Include="resources\penjualan.png" />
+    <None Include="resources\report.png" />
+    <None Include="resources\shutdown.png" />
+    <None Include="resources\supplier.png" />
+    <None Include="resources\user.png" />
+    <None Include="t_barang.xsc">
+      <DependentUpon>t_barang.xsd</DependentUpon>
+    </None>
+    <None Include="t_barang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>t_barang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="t_barang.xss">
+      <DependentUpon>t_barang.xsd</DependentUpon>
+    </None>
+    <None Include="t_lbarang.xsc">
+      <DependentUpon>t_lbarang.xsd</DependentUpon>
+    </None>
+    <None Include="t_lbarang.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>t_lbarang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="t_lbarang.xss">
+      <DependentUpon>t_lbarang.xsd</DependentUpon>
+    </None>
+    <None Include="t_pembelian.xsc">
+      <DependentUpon>t_pembelian.xsd</DependentUpon>
+    </None>
+    <None Include="t_pembelian.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>t_pembelian.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="t_pembelian.xss">
+      <DependentUpon>t_pembelian.xsd</DependentUpon>
+    </None>
+    <None Include="t_penjualan.xsc">
+      <DependentUpon>t_penjualan.xsd</DependentUpon>
+    </None>
+    <None Include="t_penjualan.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>t_penjualan.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="t_penjualan.xss">
+      <DependentUpon>t_penjualan.xsd</DependentUpon>
+    </None>
+    <None Include="t_supplier.xsc">
+      <DependentUpon>t_supplier.xsd</DependentUpon>
+    </None>
+    <None Include="t_supplier.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>t_supplier.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="t_supplier.xss">
+      <DependentUpon>t_supplier.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\login.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

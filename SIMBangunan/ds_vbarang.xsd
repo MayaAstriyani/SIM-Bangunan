@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_vbarang" targetNamespace="http://tempuri.org/ds_vbarang.xsd" xmlns:mstns="http://tempuri.org/ds_vbarang.xsd" xmlns="http://tempuri.org/ds_vbarang.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_bangunanConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_bangunanConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIMBangunan.Properties.Settings.GlobalReference.Default.db_bangunanConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_barangTableAdapter" GeneratorDataComponentClassName="v_barangTableAdapter" Name="v_barang" UserDataComponentName="v_barangTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_bangunanConnectionString (Settings)" DbObjectName="db_bangunan.dbo.v_barang" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id_barang, nama_barang, nama_satuan, nama_jenis, stok, harga_beli, harga_jual FROM dbo.v_barang</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_barang" DataSetColumn="id_barang" />
+              <Mapping SourceColumn="nama_barang" DataSetColumn="nama_barang" />
+              <Mapping SourceColumn="nama_satuan" DataSetColumn="nama_satuan" />
+              <Mapping SourceColumn="nama_jenis" DataSetColumn="nama_jenis" />
+              <Mapping SourceColumn="stok" DataSetColumn="stok" />
+              <Mapping SourceColumn="harga_beli" DataSetColumn="harga_beli" />
+              <Mapping SourceColumn="harga_jual" DataSetColumn="harga_jual" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_vbarang" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ds_vbarang" msprop:Generator_UserDSName="ds_vbarang">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_barang" msprop:Generator_TableClassName="v_barangDataTable" msprop:Generator_TableVarName="tablev_barang" msprop:Generator_TablePropName="v_barang" msprop:Generator_RowDeletingName="v_barangRowDeleting" msprop:Generator_RowChangingName="v_barangRowChanging" msprop:Generator_RowEvHandlerName="v_barangRowChangeEventHandler" msprop:Generator_RowDeletedName="v_barangRowDeleted" msprop:Generator_UserTableName="v_barang" msprop:Generator_RowChangedName="v_barangRowChanged" msprop:Generator_RowEvArgName="v_barangRowChangeEvent" msprop:Generator_RowClassName="v_barangRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_barang" msprop:Generator_ColumnVarNameInTable="columnid_barang" msprop:Generator_ColumnPropNameInRow="id_barang" msprop:Generator_ColumnPropNameInTable="id_barangColumn" msprop:Generator_UserColumnName="id_barang">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_barang" msprop:Generator_ColumnVarNameInTable="columnnama_barang" msprop:Generator_ColumnPropNameInRow="nama_barang" msprop:Generator_ColumnPropNameInTable="nama_barangColumn" msprop:Generator_UserColumnName="nama_barang" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_satuan" msprop:Generator_ColumnVarNameInTable="columnnama_satuan" msprop:Generator_ColumnPropNameInRow="nama_satuan" msprop:Generator_ColumnPropNameInTable="nama_satuanColumn" msprop:Generator_UserColumnName="nama_satuan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nama_jenis" msprop:Generator_ColumnVarNameInTable="columnnama_jenis" msprop:Generator_ColumnPropNameInRow="nama_jenis" msprop:Generator_ColumnPropNameInTable="nama_jenisColumn" msprop:Generator_UserColumnName="nama_jenis" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="stok" msprop:Generator_ColumnVarNameInTable="columnstok" msprop:Generator_ColumnPropNameInRow="stok" msprop:Generator_ColumnPropNameInTable="stokColumn" msprop:Generator_UserColumnName="stok" type="xs:int" minOccurs="0" />
+              <xs:element name="harga_beli" msprop:Generator_ColumnVarNameInTable="columnharga_beli" msprop:Generator_ColumnPropNameInRow="harga_beli" msprop:Generator_ColumnPropNameInTable="harga_beliColumn" msprop:Generator_UserColumnName="harga_beli" type="xs:int" minOccurs="0" />
+              <xs:element name="harga_jual" msprop:Generator_ColumnVarNameInTable="columnharga_jual" msprop:Generator_ColumnPropNameInRow="harga_jual" msprop:Generator_ColumnPropNameInTable="harga_jualColumn" msprop:Generator_UserColumnName="harga_jual" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_barang" />
+      <xs:field xpath="mstns:id_barang" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
